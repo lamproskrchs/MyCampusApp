@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="weather">weather</string>
+    <string name="calendar">calendar</string>
+    <string name="weather_title">ΚΑΙΡΟΣ:</string>
+</resources>
