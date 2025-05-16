@@ -78,7 +78,7 @@
             android:drawableEnd="@drawable/magnifying_glass"
             android:hint="Search"
             android:paddingStart="20dp"
-            android:paddingEnd="40dp"
+            android:paddingEnd="30dp"
             android:textColor="@color/white"
             android:textColorHint="@color/light_gray" />
     </androidx.cardview.widget.CardView>
@@ -105,7 +105,7 @@
                 android:id="@+id/calendarTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tuesday 28 January 2025"
+                android:text="Monday 19 May 2025"
                 android:textColor="@color/purple"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -135,7 +135,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Wednesday 29 January 2025"
+                android:text="Wednesday 21 May 2025"
                 android:textColor="@color/purple"
                 android:textSize="16sp"
                 android:textStyle="bold" />

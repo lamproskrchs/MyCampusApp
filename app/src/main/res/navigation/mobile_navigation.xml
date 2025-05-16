@@ -22,4 +22,12 @@
         android:name="gr.hepeastus.mycampusapp.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_maps"
+        android:name="gr.hepeastus.mycampusapp.ui.map.MapFragment"
+        android:label="Map"
+        tools:layout="@layout/fragment_map" />
+
+
 </navigation>

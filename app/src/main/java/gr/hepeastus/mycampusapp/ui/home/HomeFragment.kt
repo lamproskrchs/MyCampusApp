@@ -34,7 +34,21 @@ class HomeFragment : Fragment() {
 //        }
         return root
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        binding.account.setOnClickListener {
+            val alertDialog = androidx.appcompat.app.AlertDialog.Builder(requireContext())
+                .setTitle("Coming soon!")
+                .setMessage("The feature is still under development")
+                .setPositiveButton("OK") { dialog, _ ->
+                    dialog.dismiss()
+                }
+                .create()
+
+            alertDialog.show()
+        }
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

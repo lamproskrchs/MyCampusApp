@@ -54,7 +54,7 @@
             android:id="@+id/month"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="January"
+            android:text="May"
             android:textColor="@color/white"
             android:textSize="16sp" />
 
@@ -98,7 +98,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tuesday 28 January 2025"
+                    android:text="Monday 19 May 2025"
                     android:textColor="@color/purple"
                     android:textSize="16sp"
                     android:textStyle="bold"
@@ -136,7 +136,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Wednesday 29 January 2025"
+                    android:text="Wednesday 21 January 2025"
                     android:textColor="@color/purple"
                     android:textSize="16sp"
                     android:textStyle="bold"
@@ -155,7 +155,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Thursday 30 January 2025"
+                    android:text="Thursday 22 January 2025"
                     android:textColor="@color/purple"
                     android:textSize="16sp"
                     android:textStyle="bold"

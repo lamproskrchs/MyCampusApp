@@ -16,4 +16,10 @@
         android:icon="@drawable/baseline_wb_sunny_24"
         android:title="@string/weather" />
 
+    <item
+        android:id="@+id/navigation_maps"
+        android:icon="@drawable/map_final"
+        android:title="navigation"/>
+
+
 </menu>
