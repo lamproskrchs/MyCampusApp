@@ -7,34 +7,61 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.MapView
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
+import gr.hepeastus.mycampusapp.R
 import gr.hepeastus.mycampusapp.databinding.FragmentMapBinding;
 
 class MapFragment : Fragment() {
 
-    private var _binding: FragmentMapBinding? = null
-    private val binding get() = _binding!!
+    private var mapView: MapView? = null
+    private val universityLocation = LatLng(38.2193393, 21.7462936)
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        val mapViewModel =
-            ViewModelProvider(this).get(MapViewModel::class.java)
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_map, container, false)
 
-        _binding = FragmentMapBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        // Example: observing text
-        mapViewModel.text.observe(viewLifecycleOwner) {
-            binding.titlemap.text = it // Ensure this TextView exists in the layout
+        mapView = view.findViewById(R.id.mapView)
+        mapView?.onCreate(savedInstanceState)
+        mapView?.getMapAsync { googleMap ->
+            googleMap.uiSettings.isZoomControlsEnabled = true
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(universityLocation, 19f))
+            googleMap.addMarker(
+                MarkerOptions()
+                    .position(universityLocation)
+                    .title("University of the Peloponnese")
+            )
         }
 
-        return root
+        return view
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    override fun onResume() {
+        super.onResume()
+        mapView?.onResume()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        mapView?.onPause()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mapView?.onDestroy()
+    }
+
+    override fun onLowMemory() {
+        super.onLowMemory()
+        mapView?.onLowMemory()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        mapView?.onSaveInstanceState(outState)
     }
 }

@@ -21,5 +21,10 @@
         android:icon="@drawable/map_final"
         android:title="navigation"/>
 
+    <item
+        android:id="@+id/navigation_game"
+        android:icon="@drawable/baseline_3d_rotation_24"
+        android:title="game"/>
+
 
 </menu>

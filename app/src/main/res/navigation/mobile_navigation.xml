@@ -29,5 +29,11 @@
         android:label="Map"
         tools:layout="@layout/fragment_map" />
 
+    <fragment
+        android:id="@+id/navigation_game"
+        android:name="gr.hepeastus.mycampusapp.ui.game.GameFragment"
+        android:label="game"
+        tools:layout="@layout/fragment_game" />
+
 
 </navigation>

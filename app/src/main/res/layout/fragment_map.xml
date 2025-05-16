@@ -20,7 +20,7 @@
 
         <!-- Calendar Title -->
         <TextView
-            android:id="@+id/titlemap"
+            android:id="@+id/title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -35,21 +35,15 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:contentDescription="Account"
-            android:src="@drawable/account" />
+            android:src="@drawable/user" />
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/map_icon"
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:contentDescription="Map"
-        android:padding="9dp"
-        android:src="@drawable/campus_mapf" />
-
-
-
-
+        android:layout_margin="20dp" />
 
 </LinearLayout>
 
